@@ -10,7 +10,7 @@ const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"]
 
 const SITE_URL = "https://codetolaunch.page.dev";
 const SITE_NAME = "Code To Launch";
-const TITLE = "Code To Launch — Skip the setup. Ship this week.";
+const TITLE = "Code To Launch: Skip the setup. Ship this week.";
 const DESCRIPTION =
   "Code To Launch gives you a production-ready Next.js SaaS boilerplate and a built-in AI marketing strategist. Stop configuring. Start building.";
 
