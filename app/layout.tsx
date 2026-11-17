@@ -9,7 +9,8 @@ import "./globals.css";
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"], display: "swap" });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"], display: "swap" });
 
-const SITE_URL = "https://codetolaunch.page.dev";
+const SITE_URL = "https://codetolaunch.pages.dev";
+const OG_IMAGE_URL = `${SITE_URL}/og-image.png`;
 const SITE_NAME = "Code To Launch";
 const TITLE = "Code To Launch: Skip the setup. Ship this week.";
 const DESCRIPTION =
@@ -39,9 +40,10 @@ export const metadata: Metadata = {
     description: DESCRIPTION,
     images: [
       {
-        url: "/og-image.png",
+        url: OG_IMAGE_URL,
         width: 1200,
         height: 630,
+        type: "image/png",
         alt: "Code To Launch — Next.js SaaS Boilerplate",
       },
     ],
@@ -50,7 +52,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: TITLE,
     description: DESCRIPTION,
-    images: ["/og-image.png"],
+    images: [OG_IMAGE_URL],
     creator: "@iamzeiyn",
     site: "@iamzeiyn",
   },
@@ -80,7 +82,7 @@ function JsonLd() {
         "@id": `${SITE_URL}/#product`,
         name: "Code To Launch Next.js Starter Kit",
         description: DESCRIPTION,
-        image: `${SITE_URL}/og-image.png`,
+        image: OG_IMAGE_URL,
         brand: { "@id": `${SITE_URL}/#org` },
       },
     ],
