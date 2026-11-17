@@ -18,7 +18,7 @@ A bundle of two things:
 
 1. **Code To Launch** — A production-ready Next.js 15 SaaS boilerplate. Everything wired up, auth, payments, database, email, file uploads, background jobs, rate limiting. Clone it, fill your `.env`, start building your actual product on day one.
 
-2. **MarketPilot** — A Claude AI skill that acts as your personal marketing strategist. Positioning, pricing, Go-to-Market, conversion, retention. Not generic advice, strategy built around your specific business.
+2. **MarketPilot:** A Claude AI skill that acts as your personal marketing strategist. It covers positioning, pricing, go to market, conversion, and retention with a strategy built around your specific business.
 
 ---
 
@@ -74,7 +74,7 @@ A bundle of two things:
 
 ### Product Section — MarketPilot
 - Headline: **Your AI marketing strategist, included.**
-- Body: Most founders build a great product and have no idea how to market it. MarketPilot is a Claude skill that helps you define your positioning, set your pricing, plan your Go-to-Market, and improve conversion and retention, based on your actual business, not generic templates.
+- Body: Many founders build a great product but are unsure how to market it. MarketPilot is a Claude skill that helps you shape your positioning, set your price, plan how to reach customers, and improve conversion and retention. Every recommendation is grounded in your business, not a generic template.
 
 ### Stack Section
 - Headline: **Built with the right tools.**

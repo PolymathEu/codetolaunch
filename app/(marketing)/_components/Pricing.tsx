@@ -25,7 +25,7 @@ const questions = [
     {
         question: "What is MarketPilot?",
         answer:
-            "A Claude AI skill that acts as your personal marketing strategist. Positioning, pricing, Go-to-Market, conversion, retention. Not generic advice, strategy built around your specific business.",
+            "A Claude AI skill that acts as your personal marketing strategist. It helps you shape your positioning, set your price, plan how to reach customers, and improve conversion and retention, based on your business.",
     },
     {
         question: "Is this a subscription?",

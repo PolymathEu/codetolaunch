@@ -1,3 +1,4 @@
+
 import type { Metadata, Viewport } from "next";
 import { Geist_Mono, Inter } from "next/font/google";
 
@@ -31,11 +32,19 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
   openGraph: {
     type: "website",
+    locale: "en_US",
     url: SITE_URL,
     siteName: SITE_NAME,
     title: TITLE,
     description: DESCRIPTION,
-    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Code To Launch — Next.js SaaS Boilerplate",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -43,6 +52,7 @@ export const metadata: Metadata = {
     description: DESCRIPTION,
     images: ["/og-image.png"],
     creator: "@iamzeiyn",
+    site: "@iamzeiyn",
   },
 };
 
@@ -52,8 +62,8 @@ export const viewport: Viewport = {
   colorScheme: "dark",
 };
 
-// Structured data so Google can render this as a Product/Organization rich result.
-// Keep in sync with SITE_URL/SITE_NAME/DESCRIPTION above — no separate source of truth.
+// Structured data for search engines.
+// Keep in sync with SITE_URL, SITE_NAME, and DESCRIPTION.
 function JsonLd() {
   const data = {
     "@context": "https://schema.org",
@@ -67,18 +77,30 @@ function JsonLd() {
       },
       {
         "@type": "Product",
+        "@id": `${SITE_URL}/#product`,
         name: "Code To Launch Next.js Starter Kit",
         description: DESCRIPTION,
+        image: `${SITE_URL}/og-image.png`,
         brand: { "@id": `${SITE_URL}/#org` },
-        offers: { "@type": "Offer", priceCurrency: "USD", availability: "https://schema.org/InStock" },
       },
     ],
   };
 
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />;
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(data).replace(/</g, "\\u003c"),
+      }}
+    />
+  );
 }
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html lang="en" className={`${inter.variable} ${geistMono.variable} antialiased`}>
       <head>
